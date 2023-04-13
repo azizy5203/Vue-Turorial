@@ -31,9 +31,14 @@ function handleMidChange(e) {
     <p contenteditable @input="handleMidChange($event)">{{ mid }}</p>
     <p contenteditable>{{ right }}</p>
   </div>
+  <div class="tilter"></div>
 </template>
 
 <style lang="scss" scoped>
+.tilter{
+  padding: 5rem;
+  background-color: crimson;
+}
 .viewer {
   background-color: black;
   font-size: xx-large;
