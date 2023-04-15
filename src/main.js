@@ -1,13 +1,15 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./style.css";
 
-
-createApp(App).mount('#app')
+import VanillaTilt from "vanilla-tilt";
+createApp(App).mount("#app");
 
 VanillaTilt.init(document.querySelector(".tilter"), {
-    max: 25,
-    speed: 100,
-    perspective: 9000,
-    gyroscope: true,
-  });
+  max: 25,
+  speed: 100,
+  perspective: 9000,
+  gyroscope: true,
+  perspective: 1000,
+  reverse:true
+});
