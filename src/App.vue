@@ -2,6 +2,7 @@
 import { ref, computed } from "vue";
 import SimpleList from "./components/SimpleList.vue";
 import Store from "./components/Store.vue";
+import VanillaTilt from "vanilla-tilt";
 
 const left = ref(400);
 const mid = ref(5.564);
@@ -18,6 +19,15 @@ function handleMidChange(e) {
   viewer.value = e.target.textContent;
   mid.value = +e.target.textContent;
 }
+
+console.log(VanillaTilt)
+
+VanillaTilt.init(document.querySelector(".tilter"), {
+  max: 25,
+  speed: 100,
+  perspective: 9000,
+  gyroscope: true,
+});
 </script>
 
 <template>
@@ -35,7 +45,7 @@ function handleMidChange(e) {
 </template>
 
 <style lang="scss" scoped>
-.tilter{
+.tilter {
   padding: 5rem;
   background-color: crimson;
 }
