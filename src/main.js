@@ -1,9 +1,9 @@
+import VanillaTilt from "vanilla-tilt";
 import { createApp } from "vue";
 import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
 import "./style.css";
-
-import VanillaTilt from "vanilla-tilt";
-createApp(App).mount("#app");
+createApp(App).use(vuetify).mount("#app");
 
 VanillaTilt.init(document.querySelector(".tilter"), {
   max: 25,

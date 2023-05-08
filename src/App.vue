@@ -20,7 +20,7 @@ function handleMidChange(e) {
   mid.value = +e.target.textContent;
 }
 
-console.log(VanillaTilt)
+console.log(VanillaTilt);
 
 VanillaTilt.init(document.querySelector(".tilter"), {
   max: 25,
@@ -42,6 +42,10 @@ VanillaTilt.init(document.querySelector(".tilter"), {
     <p contenteditable>{{ right }}</p>
   </div>
   <div class="tilter"></div>
+  <v-sheet elevation="10" color="pending" width="50rem">
+    <h1 class="text-red">Header</h1>
+    <v-btn>dd</v-btn>
+  </v-sheet>
 </template>
 
 <style lang="scss" scoped>
